@@ -1,0 +1,29 @@
+<div class="bg" style="background-color: #F8F8F8;">
+    <div class="parent">
+        <div class="child">
+            <div nz-row class="imgDiv">
+                <h1 style="margin-left: 80px;">Login</h1>
+            </div>
+
+            <form nz-form [formGroup]="loginForm" class="login-form" (ngSubmit)="submitForm()">
+
+                <nz-form-item>
+                    <nz-form-control nzHasFeedback nzErrorTip="The input is not a valid email!">
+                        <input type="email" nz-input placeholder="E-mail" formControlName="email"/>
+                    </nz-form-control>
+                </nz-form-item>
+
+                <nz-form-item>
+                    <nz-form-control nzHasFeedback nzErrorTip="The input is not a valid password!">
+                        <input nz-input type="password" placeholder="Password" formControlName="password"/>
+                    </nz-form-control>
+                </nz-form-item>
+
+                <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Login</button>
+                 or <a routerLink="/signup"> register now!</a>
+
+            </form>
+
+        </div>
+    </div>
+</div>
